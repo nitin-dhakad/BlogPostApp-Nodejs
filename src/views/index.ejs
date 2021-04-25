@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Blog Post App</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Blog Post App</span>
+      <a class="nav-link" href="./newpost">New Post</a>
+    </div>
+  </nav>
+
+  <div class="list-group">
+    <% for(var i=0 ; i< recordset.length; i++){ %>
+      <a href="/viewpost/<%=recordset[i].id %>" class="list-group-item list-group-item-action ">
+        <%= recordset[i].title %>
+      </a>
+      <% } %>
+  </div>
+
+</body>
+
+</html>
