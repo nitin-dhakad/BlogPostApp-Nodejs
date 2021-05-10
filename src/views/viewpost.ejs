@@ -10,32 +10,33 @@
 </head>
 
 <body>
-
-
-
-
-    <nav class="navbar navbar-light bg-success">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Blog Post App</span>
+  <nav class="navbar navbar-light bg-success">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Blog Post App</span>
+      <div class="row">
         <a class="nav-link bg-light" href="/">Go Back</a>
-        <a class="nav-link bg bg-light" href="/editpost/<%= id %>">Edit</a>
-        <a class="nav-link bg-light" href="/deletepost/<%= id %>">Delete</a>
+        <a class="nav-link bg bg-light" style="margin: 0 5px" href="/editpost/<%= id %>">Edit</a>
+        <a class="nav-link bg-light"  href="/deletepost/<%= id %>">Delete</a>
       </div>
-    </nav>
-    <div class="card w-100 bg-info">
+    </div>
+  </nav>
+  <div class="container">
+    <div class=" w-100 ">
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title" style="font-weight: bolder;">
           <%= title %>
         </h5>
         <h6 class="card-subtitle mb-2 text-muted">
           <%= category %>
         </h6>
-        <p class="card-text">
-          <%= content %>
-        </p>
+        <div class="border border-success " style="height: 500px;">
+          <p class="card-text">
+            <%= content %>
+          </p>
+        </div>
       </div>
     </div>
-
+  </div>
 </body>
 
 </html>

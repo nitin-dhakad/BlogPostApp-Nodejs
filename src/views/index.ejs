@@ -12,19 +12,20 @@
 <body>
 
 
-  <nav class="navbar navbar-light bg-success" >
+  <nav class="navbar navbar-light bg-success">
     <div class="container-fluid">
       <span class="navbar-brand mb-0 h1">Blog Post App</span>
       <a class="nav-link bg-light" href="./newpost">New Post</a>
     </div>
   </nav>
-
-  <div class="list-group">
-    <% for(var i=0 ; i< recordset.length; i++){ %>
-      <a href="/viewpost/<%=recordset[i].id %>" class="list-group-item list-group-item-action ">
-        <%= recordset[i].title %>
-      </a>
-      <% } %>
+  <div class="container">
+    <div class="list-group mt-5">
+      <% for(var i=0 ; i< recordset.length; i++){ %>
+        <a href="/viewpost/<%=recordset[i].id %>" class="list-group-item list-group-item-action " style="font-weight: bolder;">
+          <%= recordset[i].title %>
+        </a>
+        <% } %>
+    </div>
   </div>
 
 </body>
