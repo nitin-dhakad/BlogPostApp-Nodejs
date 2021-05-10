@@ -12,26 +12,29 @@
 <body>
 
 
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Blog Post App</span>
-      <a class="nav-link" href="/">Go Back</a>
-      <a class="nav-link" href="/editpost/<%=id %>">Edit</a>
-      <a class="nav-link" href="/deletepost/<%=id %>">Delete</a>
-    </div>
-  </nav>
 
-  <div class="row">
-    <div class="col-8">
-      <%= title %>
+
+    <nav class="navbar navbar-light bg-success">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Blog Post App</span>
+        <a class="nav-link bg-light" href="/">Go Back</a>
+        <a class="nav-link bg bg-light" href="/editpost/<%= id %>">Edit</a>
+        <a class="nav-link bg-light" href="/deletepost/<%= id %>">Delete</a>
+      </div>
+    </nav>
+    <div class="card w-100 bg-info">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= title %>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <%= category %>
+        </h6>
+        <p class="card-text">
+          <%= content %>
+        </p>
+      </div>
     </div>
-    <div class="col-4">
-      <%= category %>
-    </div>
-  </div>
-  <div class ="container">
-    <%= content %>
-  </div>
 
 </body>
 
